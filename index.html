@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="routie.js"></script>
+<script>
+var $stateProvider = {};
+$stateProvider.state('login', {
+    url: "/login",
+    templateUrl: "../views/login.html",
+})
+    .state('home', {
+        abstract: true,
+        url: "/home",
+        templateUrl: "views/common/content.html",
+    })
+
+var myroutie = new routie();
+
+</script>
+</html>
