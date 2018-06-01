@@ -5,22 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+<a href="#first">第一个</a>
+<a href="#second">第二个</a>
+<div id="contentSwitch">
 
+</div>
 </body>
 <script src="routie.js"></script>
 <script>
-var $stateProvider = {};
-$stateProvider.state('login', {
-    url: "/login",
-    templateUrl: "../views/login.html",
-})
-    .state('home', {
-        abstract: true,
-        url: "/home",
-        templateUrl: "views/common/content.html",
-    })
-
 var myroutie = new routie();
+myroutie.state("first",function()
+{
+    alert("路由切换到了:first");
+}).state("second",function()
+{
+   alert("路由切换到了:second");
+});
 
 </script>
 </html>
