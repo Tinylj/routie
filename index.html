@@ -8,6 +8,8 @@
 配合Jquery-load 加载子页面。简单易用
 <a href="#first">第一个</a>
 <a href="#second">第二个</a>
+
+<a href="#notFind">没有这个页面</a>
 <div id="contentSwitch">
 
 </div>
@@ -15,6 +17,7 @@
 <script src="lib/jquery-1.11.3.min.js"></script>
 <script src="lib/routie.js"></script>
 <script>
+    //调用的时候可以模仿一下angular
 var myroutie = new routie();
 myroutie.state("first",function()
 {
@@ -22,6 +25,9 @@ myroutie.state("first",function()
 }).state("second",function()
 {
     $("#contentSwitch").load("pages/second.html");
+}).otherwise(function()
+{
+    $("#contentSwitch").load("pages/404.html");
 });
 
 </script>
